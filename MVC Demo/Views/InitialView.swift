@@ -54,8 +54,6 @@ class InitialView: UIView {
     func addLoginButton(view: UIButton) {
         guard let label else { return }
         
-        let guide = safeAreaLayoutGuide
-        
         let constraints = [
                 view.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0),
                 view.topAnchor.constraint(equalTo: label.bottomAnchor, constant: padding)
