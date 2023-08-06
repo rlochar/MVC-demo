@@ -66,4 +66,11 @@ class InitialView: UIView {
             ])
         }
     }
+    
+    private func addSubview(_ view: UIView, constraints: [NSLayoutConstraint]) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        
+        NSLayoutConstraint.activate(constraints)
+    }
 }
