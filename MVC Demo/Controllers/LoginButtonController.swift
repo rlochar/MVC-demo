@@ -23,17 +23,28 @@ class LoginButtonController {
     
     @objc private func buttonTapped() {
         if let password = getPassword(), !password.isEmpty {
-            print(password)
+            showSuccess()
         } else {
-            showAlert()
+            showError()
         }
     }
     
-    private func showAlert() {
+    private func showError() {
         let alertController = UIAlertController(title: "Error!", message: "No password provided, please try again.", preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .cancel)
         
         alertController.addAction(action)
+        controller.present(alertController, animated: true)
+    }
+    
+    private func showSuccess() {
+        let alertController = UIAlertController(title: "Success!", message: "You have been logged in.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Continue", style: .default)
+        let cancel = UIAlertAction(title: "Log out", style: .destructive)
+        
+        alertController.addAction(action)
+        alertController.addAction(cancel)
+        
         controller.present(alertController, animated: true)
     }
 }
