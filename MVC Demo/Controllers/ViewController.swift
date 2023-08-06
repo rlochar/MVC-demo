@@ -17,8 +17,6 @@ class ViewController: UIViewController {
         newView.addLabel(view: createLabel(title: "Passord:"))
         newView.addTextfield(view: createTextfield(placeholder: "Write your password here"))
     }
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
