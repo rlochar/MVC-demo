@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private var passwordController: PasswordTextfieldController?
+    
     override func loadView() {
         let newView = InitialView()
         
@@ -32,6 +34,8 @@ class ViewController: UIViewController {
 
     private func createTextfield(placeholder: String) -> UITextField {
         let textfield = UITextField()
+        passwordController = PasswordTextfieldController(textfield: textfield)
+        
         textfield.placeholder = placeholder
         return textfield
     }
