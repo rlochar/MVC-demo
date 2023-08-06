@@ -54,4 +54,16 @@ class InitialView: UIView {
             ])
         }
     }
+    
+    func addLoginButton(view: UIButton) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        
+        if let label {
+            NSLayoutConstraint.activate([
+                view.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0),
+                view.topAnchor.constraint(equalTo: label.bottomAnchor, constant: padding)
+            ])
+        }
+    }
 }
