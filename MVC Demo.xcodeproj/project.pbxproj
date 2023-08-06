@@ -14,6 +14,7 @@
 		58C34D142A7FA8C6006D7038 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C34D132A7FA8C6006D7038 /* InitialView.swift */; };
 		58C34D192A7FB315006D7038 /* PasswordTextfieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C34D182A7FB315006D7038 /* PasswordTextfieldController.swift */; };
 		58C34D1B2A7FB42E006D7038 /* LoginButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C34D1A2A7FB42E006D7038 /* LoginButtonController.swift */; };
+		58C34D1E2A7FBFAA006D7038 /* MainComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C34D1D2A7FBFAA006D7038 /* MainComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		58C34D132A7FA8C6006D7038 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		58C34D182A7FB315006D7038 /* PasswordTextfieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextfieldController.swift; sourceTree = "<group>"; };
 		58C34D1A2A7FB42E006D7038 /* LoginButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonController.swift; sourceTree = "<group>"; };
+		58C34D1D2A7FBFAA006D7038 /* MainComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		58C34CFB2A7F9FC9006D7038 /* MVC Demo */ = {
 			isa = PBXGroup;
 			children = (
+				58C34D1C2A7FBF86006D7038 /* Composers */,
 				58C34D152A7FA912006D7038 /* Lifecycle */,
 				58C34D122A7FA882006D7038 /* Models */,
 				58C34D112A7FA87D006D7038 /* Views */,
@@ -100,6 +103,14 @@
 				58C34CFC2A7F9FC9006D7038 /* AppDelegate.swift */,
 			);
 			path = Lifecycle;
+			sourceTree = "<group>";
+		};
+		58C34D1C2A7FBF86006D7038 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				58C34D1D2A7FBFAA006D7038 /* MainComposer.swift */,
+			);
+			path = Composers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 				58C34D192A7FB315006D7038 /* PasswordTextfieldController.swift in Sources */,
 				58C34D142A7FA8C6006D7038 /* InitialView.swift in Sources */,
 				58C34D012A7F9FC9006D7038 /* ViewController.swift in Sources */,
+				58C34D1E2A7FBFAA006D7038 /* MainComposer.swift in Sources */,
 				58C34CFD2A7F9FC9006D7038 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
