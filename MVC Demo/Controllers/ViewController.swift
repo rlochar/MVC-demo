@@ -22,11 +22,6 @@ class ViewController: UIViewController {
         newView.addLoginButton(view: createLoginButton(title: "Log in"))
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
     private func createLabel(title: String) -> UILabel {
         let label = UILabel()
         label.text = title
