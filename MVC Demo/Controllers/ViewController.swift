@@ -15,8 +15,16 @@ class ViewController: UIViewController {
         view = newView
         
         newView.addLabel(view: createLabel(title: "Passord:"))
+        newView.addTextfield(view: createTextfield(placeholder: "Write your password here"))
     }
     
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
     private func createLabel(title: String) -> UILabel {
         let label = UILabel()
         label.text = title
@@ -24,11 +32,10 @@ class ViewController: UIViewController {
         return label
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    private func createTextfield(placeholder: String) -> UITextField {
+        let textfield = UITextField()
+        textfield.placeholder = placeholder
+        return textfield
     }
-
-
 }
 
