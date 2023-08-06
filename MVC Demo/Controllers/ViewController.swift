@@ -13,13 +13,11 @@ class ViewController: UIViewController {
     private var buttonController: LoginButtonController?
     
     override func loadView() {
-        let newView = InitialView()
-        
+        let newView = InitialView(frame: UIScreen.main.bounds,
+                                  label: createLabel(title: "Passord:"),
+                                  textfield: createTextfield(placeholder: "Write your password here"),
+                                  button: createLoginButton(title: "Log in"))
         view = newView
-        
-        newView.addLabel(view: createLabel(title: "Passord:"))
-        newView.addTextfield(view: createTextfield(placeholder: "Write your password here"))
-        newView.addLoginButton(view: createLoginButton(title: "Log in"))
     }
 
     private func createLabel(title: String) -> UILabel {

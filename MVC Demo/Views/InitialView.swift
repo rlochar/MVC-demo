@@ -17,6 +17,14 @@ class InitialView: UIView {
         super.init(frame: frame)
     }
     
+    init(frame: CGRect, label: UILabel, textfield: UITextField, button: UIButton) {
+        super.init(frame: frame)
+        
+        addLabel(view: label)
+        addTextfield(view: textfield)
+        addLoginButton(view: button)
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -25,7 +33,7 @@ class InitialView: UIView {
     // There is no need for dependency injection in this case
     // It would be perfectly okay to add this *directly*
     // It does not require anything special from a model
-    func addLabel(view: UILabel) {
+    private func addLabel(view: UILabel) {
         label = view
         label?.setContentHuggingPriority(.required, for: .horizontal)
         
@@ -38,7 +46,7 @@ class InitialView: UIView {
         addSubview(view, constraints: constraints)
     }
     
-    func addTextfield(view: UITextField) {
+    private func addTextfield(view: UITextField) {
         guard let label else { return }
         
         let guide = safeAreaLayoutGuide
@@ -51,7 +59,7 @@ class InitialView: UIView {
         addSubview(view, constraints: constraints)
     }
     
-    func addLoginButton(view: UIButton) {
+    private func addLoginButton(view: UIButton) {
         guard let label else { return }
         
         let constraints = [
