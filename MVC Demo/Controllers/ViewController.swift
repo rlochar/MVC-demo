@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         
         let action = { [weak self] in self?.passwordController?.getText() }
         
-        buttonController = LoginButtonController(button: button, password: action)
+        buttonController = LoginButtonController(button: button, password: action, controller: self)
         
         return button
     }
