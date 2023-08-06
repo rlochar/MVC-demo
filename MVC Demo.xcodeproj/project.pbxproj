@@ -13,6 +13,7 @@
 		58C34D092A7F9FCA006D7038 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58C34D072A7F9FCA006D7038 /* LaunchScreen.storyboard */; };
 		58C34D142A7FA8C6006D7038 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C34D132A7FA8C6006D7038 /* InitialView.swift */; };
 		58C34D192A7FB315006D7038 /* PasswordTextfieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C34D182A7FB315006D7038 /* PasswordTextfieldController.swift */; };
+		58C34D1B2A7FB42E006D7038 /* LoginButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C34D1A2A7FB42E006D7038 /* LoginButtonController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		58C34D0A2A7F9FCA006D7038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58C34D132A7FA8C6006D7038 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		58C34D182A7FB315006D7038 /* PasswordTextfieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextfieldController.swift; sourceTree = "<group>"; };
+		58C34D1A2A7FB42E006D7038 /* LoginButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			children = (
 				58C34D002A7F9FC9006D7038 /* ViewController.swift */,
 				58C34D182A7FB315006D7038 /* PasswordTextfieldController.swift */,
+				58C34D1A2A7FB42E006D7038 /* LoginButtonController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C34D1B2A7FB42E006D7038 /* LoginButtonController.swift in Sources */,
 				58C34D192A7FB315006D7038 /* PasswordTextfieldController.swift in Sources */,
 				58C34D142A7FA8C6006D7038 /* InitialView.swift in Sources */,
 				58C34D012A7F9FC9006D7038 /* ViewController.swift in Sources */,

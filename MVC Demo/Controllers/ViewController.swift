@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     private var passwordController: PasswordTextfieldController?
+    private var buttonController: LoginButtonController?
     
     override func loadView() {
         let newView = InitialView()
@@ -18,6 +19,7 @@ class ViewController: UIViewController {
         
         newView.addLabel(view: createLabel(title: "Passord:"))
         newView.addTextfield(view: createTextfield(placeholder: "Write your password here"))
+        newView.addLoginButton(view: createLoginButton(title: "Log in"))
     }
 
     override func viewDidLoad() {
@@ -38,6 +40,15 @@ class ViewController: UIViewController {
         
         textfield.placeholder = placeholder
         return textfield
+    }
+    
+    private func createLoginButton(title: String) -> UIButton {
+        let button = UIButton(configuration: .bordered())
+        button.setTitle(title, for: .normal)
+        
+        buttonController = LoginButtonController(button: button)
+        
+        return button
     }
 }
 
