@@ -28,43 +28,39 @@ class InitialView: UIView {
     func addLabel(view: UILabel) {
         label = view
         label?.setContentHuggingPriority(.required, for: .horizontal)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(view)
-        
         
         let guide = safeAreaLayoutGuide
         
-        NSLayoutConstraint.activate([
+        let constraints = [
             view.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: padding),
             view.topAnchor.constraint(equalTo: guide.topAnchor, constant: padding * 2)
-        ])
+        ]
+        addSubview(view, constraints: constraints)
     }
     
     func addTextfield(view: UITextField) {
-        view.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(view)
+        guard let label else { return }
         
         let guide = safeAreaLayoutGuide
         
-        if let label {
-            NSLayoutConstraint.activate([
+        let constraints = [
                 view.leadingAnchor.constraint(equalTo: label.trailingAnchor, constant: padding),
                 view.topAnchor.constraint(equalTo: label.topAnchor, constant: 0),
                 view.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: padding)
-            ])
-        }
+        ]
+        addSubview(view, constraints: constraints)
     }
     
     func addLoginButton(view: UIButton) {
-        view.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(view)
+        guard let label else { return }
         
-        if let label {
-            NSLayoutConstraint.activate([
+        let guide = safeAreaLayoutGuide
+        
+        let constraints = [
                 view.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0),
                 view.topAnchor.constraint(equalTo: label.bottomAnchor, constant: padding)
-            ])
-        }
+        ]
+        addSubview(view, constraints: constraints)
     }
     
     private func addSubview(_ view: UIView, constraints: [NSLayoutConstraint]) {
