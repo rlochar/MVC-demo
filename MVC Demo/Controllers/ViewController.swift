@@ -41,9 +41,9 @@ class ViewController: UIViewController {
         let button = UIButton(configuration: .bordered())
         button.setTitle(title, for: .normal)
         
-        let action = { [weak self] in self?.passwordController?.getText() }
+        let password = { [weak self] in self?.passwordController?.getText() }
         
-        buttonController = LoginButtonController(button: button, password: action, controller: self)
+        buttonController = LoginButtonController(button: button, password: password, controller: self)
         
         return button
     }
