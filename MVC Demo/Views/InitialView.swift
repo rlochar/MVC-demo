@@ -19,6 +19,10 @@ class InitialView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // NOTE: This setup is *overkill*
+    // There is no need for dependency injection in this case
+    // It would be perfectly okay to add this *directly*
+    // It does not require anything special from a model
     func addLabel(view: UILabel) {
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
