@@ -10,7 +10,18 @@ import UIKit
 class ViewController: UIViewController {
     
     override func loadView() {
-        view = InitialView()
+        let newView = InitialView()
+        
+        view = newView
+        
+        newView.addLabel(view: createLabel(title: "Passord:"))
+    }
+    
+    private func createLabel(title: String) -> UILabel {
+        let label = UILabel()
+        label.text = title
+        
+        return label
     }
 
     override func viewDidLoad() {
