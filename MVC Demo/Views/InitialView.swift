@@ -48,7 +48,7 @@ class InitialView: UIView {
         
         if let label {
             NSLayoutConstraint.activate([
-                view.leadingAnchor.constraint(equalTo: label.leadingAnchor, constant: padding),
+                view.leadingAnchor.constraint(equalTo: label.trailingAnchor, constant: padding),
                 view.topAnchor.constraint(equalTo: label.topAnchor, constant: 0),
                 view.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: padding)
             ])
